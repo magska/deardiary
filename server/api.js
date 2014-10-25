@@ -1,7 +1,12 @@
 var express = require('express');
 var mongoskin = require('mongoskin');
 var bodyParser = require('body-parser');
-var db = mongoskin.db('mongodb://localhost:27017/boilerplate', {safe:true});
+var connectionString = "";
+
+fs = require('fs')
+var connectionString = fs.readFileSync('./server/connection-string.txt', 'utf8');
+
+var db = mongoskin.db(connectionString.trim(), {safe:true});
 var app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,6 +31,9 @@ router.route('/projects')
 // http://host/api/users
 router.route('/users')
   .get(function(req, res){
+    res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
+    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
     db.collection('users').find().toArray(function(err, items){
       res.json(items);
     });

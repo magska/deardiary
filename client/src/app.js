@@ -6,7 +6,8 @@ angular.module('mmApp', [
     'mmApp.home',
     'mmApp.about',
     'mmApp.login',
-    'mmApp.diary'
+    'mmApp.diary',
+    'dearDiary.service'
 ])
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider
