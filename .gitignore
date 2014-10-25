@@ -2,6 +2,7 @@ node_modules/
 build/
 compile/
 vendor/
+server/connection-string.txt
 
 .DS_Store
 npm-debug*
