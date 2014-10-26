@@ -1,13 +1,13 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('mmApp', [
+angular.module('dearDiary', [
     'ngRoute',
-    'mmApp.home',
-    'mmApp.about',
-    'mmApp.login',
-    'mmApp.diary',
-    'dearDiary.service'
+    'dearDiary.home',
+    'dearDiary.about',
+    'dearDiary.login',
+    'dearDiary.diary',
+    'dearDiary.homeService'
 ])
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider

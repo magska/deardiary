@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mmApp.login', [])
+angular.module('dearDiary.login', [])
 
 .controller('LoginController', ['$scope', function($scope) {
 
@@ -8,6 +8,6 @@ angular.module('mmApp.login', [])
 
 .controller('AuthController', ['$scope', '$rootScope', function($scope, $rootScope, AUTH_EVENTS, AuthService){
     $scope.login = function (user) {
-        
+
     }
 }]);

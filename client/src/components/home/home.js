@@ -1,10 +1,9 @@
 'use strict';
 
-angular.module('mmApp.home', [])
+angular.module('dearDiary.home', [])
 
-.controller('HomeController', ['$scope', 'userService', function($scope, userService) {
-  var users = userService.getUsers();
-  console.log(users);
+.controller('HomeController', ['$scope', 'homeService', function($scope, homeService) {
+  var users = homeService.getUsers();
   users.success(function(data){
     $scope.users = data;
   });

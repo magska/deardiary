@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('mmApp.about', [])
+angular.module('dearDiary.about', [])
 
 .controller('AboutController', ['$scope', function($scope) {
-    
+
 }]);

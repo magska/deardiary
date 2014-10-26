@@ -1,4 +1,4 @@
-angular.module('dearDiary.service', []).service('userService', ['$http', function($http){
+angular.module('dearDiary.homeService', []).service('homeService', ['$http', function($http){
   this.getUsers = function(){
     return $http.get('http://localhost:3000/api/users');
   };
